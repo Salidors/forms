@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+</head>
+
+<body>
+    <!--Простые формы-->
+    <!--action указываю файл который отвечает за отправку данных на сервер
+    name - имя конкретной формы
+    autocomplete - автозаполнение (подставляет значения которые когда то были введены на данной странице конкретным пользователем)-->
+
+    <form action="formHeandler.php" name="simpl form" autocomplete="on">Поле для ввода текста
+        <input type="text">
+        <br>
+
+    </form>
+    <hr>
+    <form action="formHeandler.php" name="simpl form2">
+
+        <fieldset><!-- Для группирования элементов формы -->
+            <legend>simpl form legend</legend><!--Формирует заголовок для полей в группах fieldset-->
+            <input type="text">
+            <br>
+            <select>#</select>
+            <br>
+            <textarea rows="10" cols="45" name="text">text</textarea>
+            <br>
+            <input type="submit">
+            <br>
+        </fieldset>
+        <form action="formHeandler.php" name="simpl form3">
+            <fieldset>
+                <legend>Personal data</legend>
+                <label for="name">your name</label><!--Метка для элемента формы-->
+                <input type="text" id="name">
+                <br>
+                <label for="speciality">выбери свою специализацию</label>
+                <select id="speciality">#</select>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Personal Massage</legend>
+                <label for="Massage">Введи свое сообщение</label>
+                <textarea id="massage" rows="10" cols="45" name="text">text</textarea>
+                <br>
+            </fieldset>
+            <input type="subnit">
+            <br>
+            <hr>
+            <label for="username">Username</label>
+            <input id="username">
+            <br>
+            <label>
+                Password
+                <input type="Password">
+            </label>
+            <hr>
+            <!--textarea-->
+            <textarea rows="10"
+                cols="45">text</textarea><!--rows, cols определяют строки и колонки, управляют размерами -->
+            <br>
+            <textarea rows="10" cols="20" name="test">text</textarea>
+            <br>
+            <textarea rows="5" cols="20" autofocus></textarea><!-- автоматически фокусирует поле к которому добавлен -->
+            <br>
+            <textarea rows="5" cols="20" disabled></textarea><!-- поле недоступно -->
+            <br>
+            <textarea rows="5" cols="20" readonly>Только чтение</textarea><!-- поле недоступно но остается активным -->
+            <br>
+            <textarea rows="5" cols="20" placeholder="Ваш текст"></textarea><!-- заменитель текста -->
+            <br>
+            <textarea rows="5" cols="20" maxlength="5"></textarea><!-- максимальное число вводимых символов -->
+            <br>
+            <textarea rows="10" cols="45" required></textarea><!-- поле обязательно должно быть заполнено -->
+            <br>
+            <input type="submit"><!-- отправить -->
+            <hr>
+            <select><!-- опции выбора -->
+                <option value="front-end">front-end</option><!-- value - значение опций -->
+                <option value="back-end" label>back-end</option><!-- указание метки элемента списка -->
+                <option value="sel" selected>selected</option><!-- выбор дефолтного элемента -->
+                <option value="dis" disabled>disabled</option><!-- блокирует выбор -->
+            </select>
+            <hr>
+        </form>
+    </form>
+
+    <!--input type="text" любые символы-->
+    <input type="text">
+    <br>
+    <!--input type="number" цифры -->
+    <input type="number">
+    <br>
+    <input type="number" min="1" max="10"><!-- от и до -->
+    <br>
+    <input type="number" step="2"><!-- шаг 2 -->
+    <br>
+    <hr>
+    <!--PASSWORD-->
+    <input type="password"><!--пароль -->
+    <hr>
+    <input type="range"><!-- бегунок -->
+    <br>
+    <input type="date"><!--дата -->
+    <br>
+    <input type="color"><!--цвет -->
+    <br>
+    <input type="submit"><!--отправить -->
+    <br>
+    <input type="reset"><!--сбросить -->
+    <br>
+    <hr>
+    <input type="submit" value="submit form">
+    <br>
+    <input type="reset" value="reset form">
+    <br>
+    <hr>
+    <input type="text" list="list">
+    <datalist id="list"><!-- список опций -->
+        <option value="front-end">front-end</option>
+        <option value="back-end">back-end</option>
+        <option value="full-stack">full-stack</option>
+    </datalist>
+    <hr>
+    <br>
+    <input type="email"><!-- мыло -->
+    <br>
+    <input type="url"><!-- адрес -->
+    <br>
+    <input type="image" src="/блогеры/web_Dev/imaje1.jpg" alt="JUST"><!-- картинка -->
+    <hr>
+    <br>
+    <input type="tel"> <!-- телефон -->
+    <br>
+    <input type="search"> <!-- поисковые запросы -->
+    <br>
+    <input type="datetime-local"><!-- локальные данные с используемого компьютера -->
+    <br>
+    <input type="month"> <!-- календарь, выбор только месяца -->
+    <br>
+    <input type="time"> <!-- установить время -->
+    <br>
+    <input type="week"> <!-- информация о неделе -->
+    <br>
+    <hr>
+    <input type="hidden" value="hi"> <!-- передача в форме промежуточных, технических данных -->
+    <br>
+    <hr>
+    <input type="file"> <!-- выбор файла с компьютера -->
+    <br>
+    <input type="file" multiple><!-- несколько файлов -->
+    <br>
+    <hr>
+    <label><!-- несколько опций -->
+        <input type="checkbox" value="опция 1">опция 1
+    </label>
+    <br>
+    <label>
+        <input checked type="checkbox" value="опция 2">опция 2
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" value="опция 3">опция 3
+    </label>
+    <br>
+    <hr><!-- несколько вариантов из списка предложенных -->
+    <input type="radio" name="value" value="опция 1">опция 1<br>
+    <input checked type="radio" name="value" value="опция 2">опция 2<br>
+    <input type="radio" name="value" value="опция 3">опция 3
+    <br>
+    <hr>
+</body>
+
+</html>
